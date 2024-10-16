@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  jamie cole
+Sudent Email:  jcole05@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+In this assignment, I deepened my understanding of data cleaning and merging across multiple sources. For example, I used apply(pl.extract_year_mdy) to extract the year from the timestamp, which helped organize survey responses by year. I also applied pl.clean_country_usa() to standardize country names, particularly dealing with various inputs for "United States." However, I encountered challenges while merging datasets. Specifically, using merge() to combine survey data with cost-of-living data by ['year', '_full_city'] and ['year', 'City'] required careful attention to alignment, and I struggled with cities that didn't match perfectly. The salary adjustment step, apply(lambda row: row["_annual_salary_cleaned"] * (100 / row['Cost of Living Index'])), sometimes led to errors when the data format wasn’t properly cleaned beforehand. One area where I need more practice with is handling complex joins across datasets with mismatched entries and ensuring data consistency across multiple columns before merging. I'll also focus on currency cleaning functions, as errors in the pl.clean_currency() function disrupted some calculations. 
